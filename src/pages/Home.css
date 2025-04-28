@@ -1,0 +1,101 @@
+/* تنظیمات کلی */
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* هدر */
+.header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745; /* سبز مشابه Spring.io */
+}
+
+.menu {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+/* محتوا */
+.content {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    color: #343a40; /* خاکستری تیره */
+}
+
+.cta-button {
+    background-color: #28a745; /* سبز اصلی */
+    border-color: #28a745;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #218838; /* سبز تیره‌تر */
+    border-color: #1e7e34;
+}
+
+/* فوتر */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40; /* خاکستری تیره */
+    color: #ffffff;
+}
+
+/* حالت روز */
+.light-mode {
+    background-color: #ffffff;
+    color: #343a40;
+}
+
+.light-mode .header {
+    background-color: #f8f9fa;
+}
+
+.light-mode .footer {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* حالت شب */
+.dark-mode {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode .header {
+    background-color: #212529;
+}
+
+.dark-mode .footer {
+    background-color: #212529;
+    color: #ffffff;
+}
+
+/* دکمه تغییر حالت */
+.dark-mode-toggle {
+    margin-left: auto;
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}

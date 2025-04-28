@@ -1,0 +1,28 @@
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./LandingPage.css";
+
+const LandingPage = () => {
+    const navigate = useNavigate();
+    const [fadeOut, setFadeOut] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setFadeOut(true);
+            setTimeout(() => {
+                navigate("/home");
+            }, 1000); // انتقال به صفحه بعد پس از 1 ثانیه
+        }, 5000); // محو شدن پس از 5 ثانیه
+
+        return () => clearTimeout(timer);
+    }, [navigate]);
+
+    return (
+        <div className={`landing-page ${fadeOut ? "fade-out" : ""}`}>
+            <h1>گروه آموزشی جاوا</h1>
+            <p>آموزش‌ها و کوچینگ برای برنامه‌نویسی</p>
+        </div>
+    );
+};
+
+export default LandingPage;
