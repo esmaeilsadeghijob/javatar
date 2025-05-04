@@ -66,15 +66,15 @@ const Roadmap = () => {
 
             <div className="controls">
                 <div className="prev-step"
-                     onClick={() => moveStep(Math.max(0, currentIndex - 1))}
-                     style={{cursor: currentIndex === 0 ? "default" : "pointer"}}>
-                    <LeftOutlined className="step-icon"/>
+                     onClick={() => moveStep(Math.min(roadmapSteps.length - 1, currentIndex + 1))}
+                     style={{cursor: currentIndex === roadmapSteps.length - 1 ? "default" : "pointer"}}>
+                    <LeftOutlined className="step-icon"/> {/* حالا باعث حرکت به مرحله‌ی بعد می‌شود */}
                 </div>
 
                 <div className="next-step"
-                     onClick={() => moveStep(Math.min(roadmapSteps.length - 1, currentIndex + 1))}
-                     style={{cursor: currentIndex === roadmapSteps.length - 1 ? "default" : "pointer"}}>
-                    <RightOutlined className="step-icon"/>
+                     onClick={() => moveStep(Math.max(0, currentIndex - 1))}
+                     style={{cursor: currentIndex === 0 ? "default" : "pointer"}}>
+                    <RightOutlined className="step-icon"/> {/* حالا باعث حرکت به مرحله‌ی قبل می‌شود */}
                 </div>
             </div>
         </div>
