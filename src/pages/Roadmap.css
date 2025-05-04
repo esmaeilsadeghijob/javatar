@@ -102,3 +102,29 @@
 .step-icon {
     font-size: 32px;
 }
+
+@media screen and (max-width: 768px) {
+    .roadmap-container {
+        width: 100%;
+        height: 100vh; /* ارتفاع تمام صفحه */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .map-view {
+        flex-direction: column; /* مراحل زیر هم نمایش داده شوند */
+        gap: 10px;
+    }
+
+    .controls {
+        position: fixed;
+        bottom: 20px; /* انتقال دکمه‌های مرحله‌ی قبل و بعد به پایین صفحه */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
