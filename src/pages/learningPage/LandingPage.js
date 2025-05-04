@@ -10,7 +10,8 @@ const LandingPage = () => {
         const timer = setTimeout(() => {
             setFadeOut(true);
             setTimeout(() => {
-                navigate("/home");
+                // navigate("/home");
+                navigate("/roadmap");
             }, 1000); // انتقال به صفحه بعد پس از 1 ثانیه
         }, 5000); // محو شدن پس از 5 ثانیه
 
@@ -20,7 +21,7 @@ const LandingPage = () => {
     return (
         <div className={`landing-page ${fadeOut ? "fade-out" : ""}`}>
             <h1>گروه آموزشی جاواتار</h1>
-            <p>ارائه آموزش‌های مرتبط با زبان برنامه‌نویسی جاوا</p>
+            <p>ارائه آموزش‌های مرتبط با زبان برنامه‌نویسی جاوا و سایر زبان های برنامه نویسی</p>
         </div>
     );
 };

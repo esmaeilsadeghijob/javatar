@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'MjDimona';
-    src: url('/src/contexts/fonts/MjDimona.ttf') format('woff');
+    src: url('/src/assets/fonts/MjDimona.ttf') format('woff');
 }
 
 @font-face {
     font-family: 'BZiba';
-    src: url('/src/contexts/fonts/B Ziba.ttf') format('woff');
+    src: url('/src/assets/fonts/B Ziba.ttf') format('woff');
 }
 
 .landing-page p {
