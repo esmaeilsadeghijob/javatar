@@ -14,7 +14,6 @@ const roadmapSteps = [
 const Roadmap = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // نمایش سه مرحله: قبلی، فعلی (بزرگ‌تر)، بعدی
     const visibleSteps = roadmapSteps.slice(
         Math.max(0, currentIndex - 1),
         Math.min(roadmapSteps.length, currentIndex + 2)
@@ -24,10 +23,11 @@ const Roadmap = () => {
         setCurrentIndex(newIndex);
     };
 
-    // کنترل حرکت با اسکرول
     useEffect(() => {
         const handleScroll = (event) => {
-            if (event.deltaY > 0) {
+            const deltaY = event.deltaY || event.touches?.[0]?.clientY;
+
+            if (deltaY > 0) {
                 setCurrentIndex((prev) => Math.min(roadmapSteps.length - 1, prev + 1));
             } else {
                 setCurrentIndex((prev) => Math.max(0, prev - 1));
@@ -35,7 +35,12 @@ const Roadmap = () => {
         };
 
         window.addEventListener("wheel", handleScroll);
-        return () => window.removeEventListener("wheel", handleScroll);
+        window.addEventListener("touchmove", handleScroll);
+
+        return () => {
+            window.removeEventListener("wheel", handleScroll);
+            window.removeEventListener("touchmove", handleScroll);
+        };
     }, []);
 
     return (
@@ -46,8 +51,8 @@ const Roadmap = () => {
                     <motion.div
                         key={step.id}
                         className={`step-marker ${step.id === currentIndex ? "current-step" : ""}`}
-                        whileHover={{scale: 1.2}}
-                        whileTap={{scale: 0.9}}
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.9 }}
                         onClick={() => moveStep(step.id)}
                     >
                         {step.icon} {step.title}
@@ -56,25 +61,17 @@ const Roadmap = () => {
                 ))}
             </div>
 
-            {/*<motion.div*/}
-            {/*    className="student-icon"*/}
-            {/*    animate={{ x: roadmapSteps[currentIndex].position.x, y: roadmapSteps[currentIndex].position.y }}*/}
-            {/*    transition={{ type: "spring", stiffness: 100 }}*/}
-            {/*>*/}
-            {/*    🎓*/}
-            {/*</motion.div>*/}
-
             <div className="controls">
                 <div className="prev-step"
                      onClick={() => moveStep(Math.min(roadmapSteps.length - 1, currentIndex + 1))}
-                     style={{cursor: currentIndex === roadmapSteps.length - 1 ? "default" : "pointer"}}>
-                    <LeftOutlined className="step-icon"/> {/* حالا باعث حرکت به مرحله‌ی بعد می‌شود */}
+                     style={{ cursor: currentIndex === roadmapSteps.length - 1 ? "default" : "pointer" }}>
+                    <LeftOutlined className="step-icon"/>
                 </div>
 
                 <div className="next-step"
                      onClick={() => moveStep(Math.max(0, currentIndex - 1))}
-                     style={{cursor: currentIndex === 0 ? "default" : "pointer"}}>
-                    <RightOutlined className="step-icon"/> {/* حالا باعث حرکت به مرحله‌ی قبل می‌شود */}
+                     style={{ cursor: currentIndex === 0 ? "default" : "pointer" }}>
+                    <RightOutlined className="step-icon"/>
                 </div>
             </div>
         </div>
