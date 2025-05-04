@@ -59,7 +59,8 @@
     font-size: 18px;
     padding: 8px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: transparent; /* حذف پس‌زمینه */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* تنظیم یک کادر سفید */
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     text-align: center;
