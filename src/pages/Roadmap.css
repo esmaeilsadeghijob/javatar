@@ -8,6 +8,11 @@
     src: url('/src/assets/fonts/Lalezar-Regular.otf') format('truetype');
 }
 
+@font-face {
+    font-family: 'LFar_Niloo';
+    src: url('/src/assets/fonts/Far_Niloo.ttf') format('truetype');
+}
+
 /* تنظیمات کلی */
 .roadmap-container {
     font-family: 'EntezarD6', sans-serif;
@@ -41,6 +46,12 @@
     gap: 20px;
 }
 
+.step-description {
+    font-family: 'B Yas', sans-serif;
+    font-size: 14px;
+    color: black; /* رنگ متون */
+    padding-top: 5px;
+}
 
 /* استایل مراحل */
 .step-marker {
