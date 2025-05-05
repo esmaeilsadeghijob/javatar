@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Javatar",
+  "name": "Javatar - آموزش برنامه‌نویسی",
+  "description": "منبع تخصصی آموزش زبان‌های برنامه‌نویسی و توسعه نرم‌افزار",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#282c34",
+  "background_color": "#ffffff",
+  "orientation": "portrait"
 }
