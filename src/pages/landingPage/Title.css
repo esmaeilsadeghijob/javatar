@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Far_Casablanca';
+    src: url('/src/assets/fonts/Far_Casablanca.ttf') format('woff');
+}
+
+/* تنظیمات عمومی صفحه */
+.landing-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #f5f5f5 50%, #dddddd 50%); /* دو رنگ */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+/* بخش تصویر */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 380px; /* اندازه تصویر کمی کوچک‌تر */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* خط عمودی تورفته و برجسته */
+.divider {
+    height: 60%;
+    width: 2px; /* خط نازک‌تر */
+    background: linear-gradient(to bottom, #999, #777, #555); /* رنگ‌های روشن‌تر */
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.2), /* سایه کم‌رنگ‌تر */
+    0px 0px 3px rgba(255, 255, 255, 0.1); /* نور ملایم‌تر */
+    border-radius: 2px;
+}
+
+/* بخش گزینه‌ها */
+.options-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* عنوان منو */
+.options-section h2 {
+    font-family: 'Lalezar-Regular', sans-serif;
+    margin-bottom: 20px;
+    font-size: 1.6rem; /* کمی کوچک‌تر */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* استایل منو (پیش‌فرض - دسکتاپ) */
+.menu {
+    width: 280px; /* عرض بزرگ‌تر در دسکتاپ */
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+}
+
+/* استفاده از فونت در گزینه‌های منو */
+.menu-item {
+    font-family: 'Far_Casablanca', sans-serif;
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 12px;
+}
+
+/* فاصله بیشتر بین "مشاوره" و "آموزش" */
+.menu-item:nth-child(1) {
+    margin-bottom: 15px; /* فاصله کمی کمتر */
+}
+
+/* حذف فاصله از آخرین آیتم */
+.menu-item:last-child {
+    margin-bottom: 0;
+}
+
+/* افکت انتخابی هنگام هاور */
+.menu-item:hover {
+    background: linear-gradient(to right, #FFD700, #FF8C00); /* زرد به نارنجی */
+    color: #000; /* متن مشکی */
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+/* ✅ تنظیمات ریسپانسیو برای نمایشگرهای کوچک */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* تبدیل به چیدمان عمودی */
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-section img {
+        width: 300px; /* کاهش اندازه تصویر */
+    }
+
+    .divider {
+        display: none; /* مخفی کردن خط عمودی در موبایل */
+    }
+
+    .menu {
+        width: 100%; /* حالا منو تمام عرض صفحه را می‌گیرد */
+    }
+
+    .menu-item {
+        font-size: 1.3rem; /* متن کمی بزرگ‌تر برای خوانایی */
+        padding: 18px; /* تنظیم فاصله مناسب */
+    }
+}

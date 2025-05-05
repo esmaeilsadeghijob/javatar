@@ -1,9 +1,10 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import LandingPage from "./pages/learningPage/LandingPage";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import "./App.css";
 import Roadmap from "./pages/Roadmap";
+import Title from "./pages/landingPage/Title";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Route path="/" element={<LandingPage/>}/>
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/roadmap" element={<Roadmap/>}/>
+                <Route path="/title" element={<Title/>}/>
             </Routes>
         </Router>
     );

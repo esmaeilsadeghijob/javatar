@@ -10,7 +10,7 @@ const LandingPage = () => {
         const timer = setTimeout(() => {
             setFadeOut(true);
             setTimeout(() => {
-                navigate("/home");
+                navigate("/title");
                 // navigate("/roadmap");
             }, 1000); // انتقال به صفحه بعد پس از 1 ثانیه
         }, 5000); // محو شدن پس از 5 ثانیه

@@ -1,0 +1,75 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff; /* تغییر پس‌زمینه به سفید */
+    padding: 0 15px;
+}
+
+.menu-right .ant-menu-item {
+    color: #666666; /* تغییر رنگ متن و آیکون‌ها به نوک‌مدادی */
+}
+
+.menu-right .ant-menu-item svg {
+    color: #666666; /* تغییر رنگ آیکون‌ها به نوک‌مدادی */
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.more-icon {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    margin-left: 8px; /* آیکون سه خط دقیقا در راست‌ترین قسمت */
+}
+
+.menu-right {
+    display: flex;
+    position: relative; /* تنظیم منو داخل هدر */
+    top: 0; /* چسباندن کامل منو به هدر */
+    margin: 0; /* حذف فاصله اضافی */
+    background-color: #f8f9fa;
+}
+
+.menu-right .ant-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0px 6px;
+    gap: 0;
+    margin: 0 6px;
+    background-color: #f8f9fa;
+}
+
+.menu-right .ant-menu-item svg {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.menu-right .ant-menu-item span {
+    font-size: 12px;
+    margin-top: 1px; /* چسباندن کامل متن به آیکون بدون هیچ فاصله */
+    margin-bottom: -22px;
+}
+
+
+
