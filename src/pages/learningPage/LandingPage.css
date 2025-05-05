@@ -24,17 +24,16 @@
 
 .landing-page {
     text-align: center;
-    padding: 50px;
+    padding: 0;
     background-color: #282c34;
     color: white;
-    height: 100vh;
+    min-height: 100vh; /* حداقل ارتفاع برابر با ارتفاع صفحه */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
 }
+
 
 .landing-page.fade-out {
     animation: curtain-slide 1s ease-in-out forwards, fade-out 1s ease-in-out forwards;
