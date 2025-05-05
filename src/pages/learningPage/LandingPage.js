@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
+import logo from '../../assets/img/javatar2.png';
 
 const LandingPage = () => {
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ const LandingPage = () => {
 
     return (
         <div className={`landing-page ${fadeOut ? "fade-out" : ""}`}>
+            <img src={logo} alt="جاواتار" className="logo"/>
             <h1>گروه آموزشی جاواتار</h1>
             <p>ارائه آموزش‌های مرتبط با زبان های برنامه نویسی</p>
         </div>

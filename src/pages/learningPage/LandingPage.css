@@ -24,14 +24,22 @@
 
 .landing-page {
     text-align: center;
-    padding: 0;
+    padding: 50px;
     background-color: #282c34;
     color: white;
-    min-height: 100vh; /* حداقل ارتفاع برابر با ارتفاع صفحه */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px; /* فاصله‌ی لوگو از متن */
 }
 
 
