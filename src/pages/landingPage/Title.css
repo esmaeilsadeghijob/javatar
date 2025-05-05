@@ -66,6 +66,7 @@
 
 /* استایل منو (پیش‌فرض - دسکتاپ) */
 .menu {
+    font-family: 'Far_Casablanca', sans-serif;
     width: 280px; /* عرض بزرگ‌تر در دسکتاپ */
     text-align: center;
     background: #ffffff;
@@ -99,7 +100,7 @@
 
 /* افکت انتخابی هنگام هاور */
 .menu-item:hover {
-    background: linear-gradient(to right, #FFD700, #FF8C00); /* زرد به نارنجی */
+    background: linear-gradient(to right, #FFDD44, #FFD700); /* زرد روشن به طلایی */
     color: #000; /* متن مشکی */
     border-radius: 5px;
     transition: 0.3s ease-in-out;
