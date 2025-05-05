@@ -23,23 +23,26 @@
 
 
 .landing-page {
+    position: fixed; /* ثابت نگه‌داشتن صفحه */
+    top: 0;
+    left: 0;
+    width: 100vw; /* عرض برابر با صفحه */
+    height: 100vh; /* ارتفاع برابر با نمایشگر */
     text-align: center;
-    padding: 50px;
+    padding: 0;
     background-color: #282c34;
     color: white;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    overflow: hidden; /* جلوگیری از اسکرول */
 }
 
 .logo {
     width: 100px;
     height: auto;
-    margin-bottom: 10px; /* فاصله‌ی لوگو از متن */
+    margin-bottom: 10px;
 }
 
 
