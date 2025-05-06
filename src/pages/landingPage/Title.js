@@ -27,16 +27,16 @@ const Title = () => {
                     <h2>خدمات جاوتار</h2>
                     <Menu mode="vertical" theme="light" className="menu">
                         <Menu.Item key="1">
-                            <a href="/consulting">مشاوره</a>
+                            <a href="https://www.esmaeilsadeghi.ir/signup">ثبت نام</a>
                         </Menu.Item>
                         <Menu.Item key="2">
-                            <a href="/training">آموزش</a>
+                            <a href="https://www.esmaeilsadeghi.ir/training-path">کوچینگ</a>
+                        </Menu.Item>
+                        <Menu.Item key="4">
+                            <a href="https://www.esmaeilsadeghi.ir/#projects">آموزش</a>
                         </Menu.Item>
                         <Menu.Item key="3">
                             <a href="/jobs">کاریابی</a>
-                        </Menu.Item>
-                        <Menu.Item key="4">
-                            <a href="/research">پژوهش</a>
                         </Menu.Item>
                     </Menu>
                 </div>
