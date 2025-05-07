@@ -4,7 +4,7 @@ import LandingPage from "./pages/learningPage/LandingPage";
 import Home from "./pages/home/Home";
 import "./App.css";
 import Roadmap from "./pages/Roadmap";
-import Title from "./pages/landingPage/Title";
+import Title from "./pages/title/Title";
 
 function App() {
     return (
