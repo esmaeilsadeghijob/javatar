@@ -3,6 +3,7 @@
     src: url('/src/assets/fonts/Far_Casablanca.ttf') format('woff');
 }
 
+
 /* تنظیمات عمومی صفحه */
 .landing-container {
     height: 100vh;
@@ -77,7 +78,7 @@
 
 /* استفاده از فونت در گزینه‌های منو */
 .menu-item {
-    font-family: 'Far_Casablanca', sans-serif;
+    font-family: 'MjDimona', sans-serif;
     padding: 16px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -104,6 +105,75 @@
     color: #000; /* متن مشکی */
     border-radius: 5px;
     transition: 0.3s ease-in-out;
+}
+
+/* ✅ اطلاع‌رسانی کم‌ارتفاع، وسط‌چین و چشمک‌زن */
+.rtl-alert {
+    direction: rtl;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    background: linear-gradient(to left, #ffdd44, #ffd700);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+}
+
+/* ✅ تنظیمات مرکز پیام */
+.centered-message {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* ✅ انیمیشن نمایش متن */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* ✅ پیام چشمک‌زن */
+@keyframes blink-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blink-icon {
+    animation: blink-animation 0.6s infinite; /* فقط آیکون چشمک‌زن باشد */
+}
+
+@keyframes fade-in-animation {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-description {
+    font-family: 'B Ziba', sans-serif;
+    animation: fade-in-animation 1s ease-in-out; /* توضیحات از وسط نمایش داده شود */
+    font-size: 15px;
+}
+
+.blink-message {
+    font-family: 'B Paatch', sans-serif; /* ✅ تغییر فونت به B Ziba */
+    animation: blink-animation 0.6s infinite; /* پیام چشمک‌زن */
+    font-weight: bold;
+    font-size: 3.1rem;
+}
+
+.titr-msg {
+    font-family: "B Tanab";
+}
+
+.blink-description {
+    animation: blink-animation 0.6s infinite; /* چشمک‌زن شدن اولیه */
+}
+
+.rtl-alert .ant-alert-message {
+    font-weight: bold; /* ✅ بولد کردن پیام */
 }
 
 /* ✅ تنظیمات ریسپانسیو برای نمایشگرهای کوچک */

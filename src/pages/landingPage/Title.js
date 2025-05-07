@@ -1,19 +1,41 @@
-import React from "react";
-import {Layout, Menu, Divider, Image} from "antd";
+import React, {useState, useEffect} from "react";
+import {Layout, Menu, Divider, Image, Alert} from "antd";
+import {CloseSquareOutlined} from "@ant-design/icons";
 import "./Title.css";
 
 const {Content} = Layout;
 
 const Title = () => {
+    const [isBlinking, setIsBlinking] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsBlinking(false);
+        }, 4000); // بعد از ۴ ثانیه چشمک زدن متوقف شود
+    }, []);
+
     return (
         <Layout className="landing-container">
+            {/* ✅ اطلاع‌رسانی پویا */}
+            <Alert
+                message={<span><a className="titr-msg">اطلاعیه</a><span className="blink-icon">📢</span> </span>} // فقط آیکون چشمک‌زن باشد
+                description={
+                    <span className={`fade-description ${isBlinking ? "fade-in" : ""}`}>
+            ثبت‌نام کوچینگ و دوره‌های آموزشی ترم تابستان آغاز شد
+        </span>
+                }
+                type="warning"
+                closable
+                className="rtl-alert"
+            />
+
             <Content className="content">
                 {/* بخش تصویر */}
                 <div className="image-section">
                     <Image
                         src="/assets/img/img.png"
                         alt="Sample"
-                        width="80%" /* بزرگ‌ترین حالت ممکن */
+                        width="80%"
                         preview={false}
                         style={{borderRadius: "10px", boxShadow: "0px 4px 8px rgba(0,0,0,0.2)"}}
                     />
