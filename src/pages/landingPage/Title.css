@@ -3,6 +3,15 @@
     src: url('/src/assets/fonts/Far_Casablanca.ttf') format('woff');
 }
 
+@font-face {
+    font-family: 'Morvarid';
+    src: url('/src/assets/fonts/B Morvarid.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Siavash';
+    src: url('/src/assets/fonts/B Siavash.ttf') format('woff');
+}
 
 /* تنظیمات عمومی صفحه */
 .landing-container {
@@ -153,13 +162,12 @@
 }
 
 .fade-description {
-    font-family: 'B Ziba', sans-serif;
+    font-family: 'Morvarid', sans-serif;
     animation: fade-in-animation 1s ease-in-out; /* توضیحات از وسط نمایش داده شود */
-    font-size: 15px;
 }
 
 .blink-message {
-    font-family: 'B Paatch', sans-serif; /* ✅ تغییر فونت به B Ziba */
+    font-family: 'Siavash', sans-serif; /* ✅ تغییر فونت به B Ziba */
     animation: blink-animation 0.6s infinite; /* پیام چشمک‌زن */
     font-weight: bold;
     font-size: 3.1rem;
