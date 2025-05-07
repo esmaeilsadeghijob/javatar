@@ -18,7 +18,7 @@ const Title = () => {
         <Layout className="landing-container">
             {/* ✅ اطلاع‌رسانی پویا */}
             <Alert
-                message={<span><span className="blink-icon">📢</span><a className="titr-msg">اطلاعیه</a> </span>}
+                message={<span><a className="titr-msg">اطلاعیه</a><span className="blink-icon">📢</span> </span>} // فقط آیکون چشمک‌زن باشد
                 description={
                     <span className={`fade-description ${isBlinking ? "fade-in" : ""}`}>
             ثبت‌نام کوچینگ و دوره‌های آموزشی ترم تابستان آغاز شد
